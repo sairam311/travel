@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .about-container {
+    background: url('./images/contact.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-text-fill-color: #000000;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .main-about {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px; /* Limit max width for the main contact */
+  }
+  
+  .about-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 80%; 
+    margin-right: 20px;
+    
+  }
+  
+  .about-info {
+    text-align: left;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px; /* Limit max width for the contact grid */
+  }
+  .about-grid .about-mentor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+   /* background-color: #f0f0f0; */
+    border-radius: 8px;
+    /* backdrop-filter: blur(5px);
+    border: 1px solid #ddd; */
+    transition: transform 0.2s;
+  }
+  
+  .about-grid .about-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-color: #f2f5f743; 
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+   /* border: 1px solid #ddd; */
+    transition: transform 0.2s;
+  }
+  
+  .about-grid .about-person:hover {
+    transform: scale(1.05);
+  }
+  
+  h4 {
+    margin: 10px 0 5px;
+    color: #000000;
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #000000;
+  }
+  

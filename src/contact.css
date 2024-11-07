@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+
+.contact-container {
+    background: url('./images/contactus.jpg') no-repeat center center/cover;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container h1 {
+    font-size: 2em;
+    color: #f28e3c;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.contact-container h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #f2a03c;
+    margin: 8px auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.contact-form label {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f4f009;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3c50f2;
+    outline: none;
+}
+
+.contact-form button {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #3c50f2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #52c92e;
+}
