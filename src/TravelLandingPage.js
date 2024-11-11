@@ -53,7 +53,7 @@ const TravelLandingPage = () => {
           </div>
           <ul className={isMenuOpen ? 'active' : ''}>
             <li><button onClick={() => { setActiveSection("home"); setIsMenuOpen(false); }}>Home</button></li>
-            <li><button onClick={() => { setActiveSection("login"); setIsMenuOpen(false); }}>Login</button></li>
+            <li><button onClick={() => { setActiveSection("login"); setIsMenuOpen(false); }}>Login / Sign up</button></li>
             <li><button onClick={() => { setActiveSection("contact"); setIsMenuOpen(false); }}>Contact</button></li>
             <li><button onClick={() => { setActiveSection("about"); setIsMenuOpen(false); }}>About Us</button></li>
           </ul>

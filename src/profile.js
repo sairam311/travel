@@ -43,6 +43,10 @@ const favourites = [
   },
   // Add more favorite places as needed
 ];
+const bookingHistory = [
+  
+  // Add more favorite places as needed
+];
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("favourites");
@@ -70,7 +74,7 @@ const Profile = () => {
       case "favourites":
         return (
           <div className="favourites-section">
-            <h3>My Favourites ({favourites.length})</h3>
+            <h3>My Favourites {/*({favourites.length}) */}</h3>
             
             <div className="favourites-list">
               {favourites.map((place, index) => (
@@ -110,7 +114,8 @@ const Profile = () => {
       </div>
         <div className="profile-nav">
           <button className={activeTab === "timeline" ? "active" : ""} onClick={() => setActiveTab("timeline")}>Timeline ({timeline.length})</button>
-          <button onClick={() => setActiveTab("bookingHistory")}>Booking History {/* ({user.bookingHistoryCount}) */}</button>
+          <button className={activeTab === "bookingHistory" ? "active" : ""} onClick={() => setActiveTab("bookingHistory")}>Booking History ({bookingHistory.length})</button>
+        {/*  <button onClick={() => setActiveTab("bookingHistory")}>Booking History  ({user.bookingHistoryCount}) </button>  */}  
           <button onClick={() => setActiveTab("newBookings")}>New Bookings {/* ({user.newBookingsCount}) */}</button>
           <button className={activeTab === "favourites" ? "active" : ""} onClick={() => setActiveTab("favourites")}>My Favourites ({favourites.length})</button>
           <button onClick={() => setActiveTab("accountSettings")}>Account Settings</button>
