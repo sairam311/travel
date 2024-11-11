@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+.home-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 3rem;
+    position: fixed;
+    backdrop-filter: blur(20px);
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(50, 101, 173, 0.648);
+  }
+  .home-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .home-navbar ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .home-navbar li {
+    margin-left: 2rem;
+  }
+
+  .home-navbar li button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .home-navbar li button:hover {
+    color: #00A651;
+  }
+  
+  .home-login {
+    background: url('./images/try.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .home-hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .home-hero-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    /*color: rgb(244, 243, 236); */
+  }
+
+  .home-search-box {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.3rem;
+    border-radius: 7px;
+    justify-content: center;
+  }
+  
+  .home-search-box input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .home-search-box button {
+    background-color: #00A651;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .home-search-box button:hover {
+    background-color: #007b3d;
+  }
+  .content-section {
+    min-height: 100vh;
+    min-width: 209.3vh; /* Takes full viewport height */
+   /* Offset for the navbar */
+    display:unset;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f0f0f0; /* Optional: light background for readability */
+    color: #333; /* Optional: Darker text color */
+  
+  }
+  
+  .content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
