@@ -3,6 +3,7 @@ import './about.css'; // Ensure this file contains the necessary styling
 import img1 from './images/login.jpg';
 import sairam from './images/sairam.png';
 import gitanjani from './images/gitanjani.png';
+import priya from './images/Priya.jpg';
 const About = () => {
   return (
     <div className="about-container">
@@ -42,7 +43,7 @@ const About = () => {
         
         <div className="about-person">
         <img
-          src={img1} // Use the imported image
+          src={priya} // Use the imported image
           alt="Mentor: Edward Schettino, DVM, PhD, CAWA"
           className="about-image"
         />
