@@ -48,7 +48,7 @@
   }
   
   .home-login {
-    background: url('./images/try.jpg') no-repeat center center/cover;
+    background: url('./images/homepage.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -59,11 +59,13 @@
   
   .home-hero-section h1 {
     font-size: 3rem;
+    color:#333;
     margin-bottom: 2rem;
   }
   
   .home-hero-section h3 {
     font-size: 1.2rem;
+    color:#333;
     margin-bottom: 2rem;
     /*color: rgb(244, 243, 236); */
   }
