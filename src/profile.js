@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./profile.css";
-import img1 from './images/login.jpg';
+import img1 from './images/altis_resort.jpg';
 import maldives from './images/maldives.png';
+import profile_pic from './images/Priya.jpg';
 
 const user = {
-  name: "Modi",
+  name: "Priya",
   location: "Hyderabad,Telangana,India.",
   points: 1024,
-  avatar: img1,
+  avatar: profile_pic,
   bookingHistoryCount: 2,
   newBookingsCount: 1,
 };
@@ -97,7 +98,7 @@ const Profile = () => {
           </div>
         );
       case "accountSettings":
-        return <div className="content">Account Settings {/* content here */}</div>;
+        return <div className="settings">Account Settings {/* content here */}</div>;
       default:
         return null;
     }
