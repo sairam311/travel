@@ -7,6 +7,9 @@ import profile_pic from './images/Priya.jpg';
 
 const user = {
   name: "Priya",
+  DOB:"01-01-2000",
+  email:'abc@gmail.com',
+  mobile_number: 1234567890,
   location: "Hyderabad,Telangana,India.",
   points: 1024,
   avatar: profile_pic,
@@ -98,7 +101,74 @@ const Profile = () => {
           </div>
         );
       case "accountSettings":
-        return <div className="settings">Account Settings {/* content here */}</div>;
+        return (
+        <div className="settings">
+         {/*} Account Settings  content here */}
+          <div className="profile-settings">
+            <div className="sidebar">
+              <div className="settings-profile-info">
+                <img src={profile_pic} alt="Profile" className="settings-profile-avatar" />
+                <h3>{user.name}</h3><br></br>
+                {user.location}
+              </div>
+              <div className="uploaded-documents">
+                <button className="upload-profile-button">update profile photo</button>
+              </div>
+            </div>
+            <div className="profile-form">
+            <button className="profile-billing">Profile</button>
+            <button className="billing-profile">Billing</button> 
+            <br></br><br></br>
+              <h2>Personal Information</h2>
+              <form>
+                <div className="form-row">
+                  <label>First Name</label>
+                  <input type="text" placeholder={user.name} />
+                  <label>Last Name</label>
+                  <input type="text" placeholder="Enter your last name" />
+                </div>
+                <div className="form-row">
+                  <label>Location</label>
+                  <input type="text" placeholder="Enter your location" />
+                  <label>Birthday</label>
+                  <input type="text" placeholder={user.DOB} />
+                </div>
+                <div className="form-row">
+                  <label>Email</label>
+                  <input type="email" placeholder={user.email} />
+                  <label>Phone</label>
+                  <input type="text" placeholder={user.mobile_number} />
+                </div>
+                <div className="form-row">
+                  <label>Country</label>
+                  <select>
+                    <option>Select</option>
+                    <option>India</option>
+                    <option>USA</option>
+                  </select>
+                  <label>City</label>
+                  <select>
+                    <option>Select</option>
+                    <option>Hyderabad</option>
+                    <option>Mumbai</option>
+                    <option>New Delhi</option>
+                    <option>Banglore</option>
+                  </select>
+                  <label>Pin code</label>
+                  <input type="number" placeholder="Enter Pin code"></input>
+                </div>
+                <div className="settings-points">
+                  <label >Points : <span>{user.points}  PTS</span></label>
+                </div>
+                <div className="form-actions">
+                  <button type="button" className="reset-button">Reset</button>
+                  <button type="submit" className="save-button">Save Change</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        );
       default:
         return null;
     }
