@@ -15,6 +15,8 @@ const user = {
   avatar: profile_pic,
   bookingHistoryCount: 2,
   newBookingsCount: 1,
+  cardno:"XXXX-XXXX-XXXX-XXXX",
+  cvv:"XXX",
 };
 
 const timeline = [
@@ -116,9 +118,6 @@ const Profile = () => {
               </div>
             </div>
             <div className="profile-form">
-            <button className="profile-billing">Profile</button>
-            <button className="billing-profile">Billing</button> 
-            <br></br><br></br>
               <h2>Personal Information</h2>
               <form>
                 <div className="form-row">
@@ -131,13 +130,13 @@ const Profile = () => {
                   <label>Location</label>
                   <input type="text" placeholder="Enter your location" />
                   <label>Birthday</label>
-                  <input type="text" placeholder={user.DOB} />
+                  <input type="date" placeholder={user.DOB} />
                 </div>
                 <div className="form-row">
                   <label>Email</label>
                   <input type="email" placeholder={user.email} />
                   <label>Phone</label>
-                  <input type="text" placeholder={user.mobile_number} />
+                  <input type="number" min="1000000000" max="9999999999" placeholder={user.mobile_number} />
                 </div>
                 <div className="form-row">
                   <label>Country</label>
@@ -155,13 +154,44 @@ const Profile = () => {
                     <option>Banglore</option>
                   </select>
                   <label>Pin code</label>
-                  <input type="number" placeholder="Enter Pin code"></input>
+                  <input type="number" min="100" max="9999999999" placeholder="Enter Pin code"></input>
                 </div>
                 <div className="settings-points">
                   <label >Points : <span>{user.points}  PTS</span></label>
-                </div>
+                </div><br></br>
                 <div className="form-actions">
                   <button type="button" className="reset-button">Reset</button>
+                  <button type="submit" className="save-button">Save Change</button>
+                </div>
+              </form>
+            </div>
+            <div className="billing-form">
+              <h2>Billing Information</h2>
+              <form>
+                <div className="billing-form-row">
+                  <label>Name on Card</label>
+                  <input type="text" placeholder={user.name} />
+                </div>
+                <div className="billing-form-row">
+                  <label>Card Number</label>
+                  <input type="number" min="1000000000000000" max="9999999999999999" placeholder={user.cardno} />
+                  <br></br>
+                  <label>CVV</label>
+                  <input type="number" min="100" max="999" placeholder={user.cvv}/>
+                </div>
+                <div className="billing-form-row">
+                  <label>Expiratin Date</label>
+                  <input type="month" placeholder={"MM/YYYY"} />
+                </div>
+                <div className="billing-form-row">
+                  <label>Billing Address</label>
+                  <input type="text" placeholder={"Address"} />
+                </div>
+                <div className="billing-form-row">
+                  <label>Country</label>
+                  <input type="text" placeholder={"INDIA"} />
+                </div>
+                <div className="billing-form-actions">
                   <button type="submit" className="save-button">Save Change</button>
                 </div>
               </form>
