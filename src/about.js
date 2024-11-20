@@ -37,8 +37,7 @@ const About = () => {
         />
           <h4>K.Sai Ram Chowdary</h4>
           <h4>FullStack Developer</h4>
-          <p><strong>Email:</strong>
-          kaminenisairam33@gmail.com</p>
+          <p><strong>Email:</strong>kaminenisairam33@gmail.com</p>
           <p>Phone: 7674802148</p>
         </div>
         
