@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "./profile.css";
 import img1 from './images/altis_resort.jpg';
 import maldives from './images/maldives.png';
-import profile_pic from './images/Priya.jpg';
+import profile_pic from './images/user.jpg';
 
 const user = {
-  name: "Priya",
+  name: "Sai Ram Chowdary",
   DOB:"01-01-2000",
-  email:'abc@gmail.com',
+  email:'kaminenisairam33@gmail.com',
   mobile_number: 1234567890,
   location: "Hyderabad,Telangana,India.",
   points: 1024,
@@ -220,7 +220,7 @@ const Profile = () => {
           </div>
           <div className="user-details">
             <h2>{user.name}</h2>
-            <p>{user.location}</p>
+            <h3>{user.location}</h3>
             <div className="points">
               <span>{user.points}  PTS</span>
             </div>

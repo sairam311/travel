@@ -36,8 +36,9 @@ const About = () => {
           className="about-image"
         />
           <h4>K.Sai Ram Chowdary</h4>
-          <h4>Frontend and Backend Developer</h4>
-          <p><strong>Email:</strong>kaminenisairam33@gmail.com</p>
+          <h4>FullStack Developer</h4>
+          <p><strong>Email:</strong>
+          kaminenisairam33@gmail.com</p>
           <p>Phone: 7674802148</p>
         </div>
         

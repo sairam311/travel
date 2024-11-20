@@ -47,13 +47,15 @@
     color: white;
   }
   
-  .user-details p {
+  .user-details h3 {
     color: white;
     margin: 4px 0;
     font-size: 16px;
   }
   
   .points {
+    text-align:left;
+    /*margin-right: 45%; */
     font-size: 18px;
     font-weight: bold;
     color: yellow;
