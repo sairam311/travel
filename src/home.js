@@ -3,10 +3,18 @@ import './home.css';
 import Contact from './contact';
 import About from './about';
 import Profile from './profile';
+import { useNavigate } from "react-router-dom";
+import Navbar from './usernavbar';
 
 const Home = () => {
     const [activeSection, setActiveSection] = useState("home-login");
     const [isMenu, setIsMenu] = useState(false);
+    const navigate = useNavigate(); 
+
+  const handlefindtrip = () => {
+    // Redirect to the TravelLandingPage ("/")
+    navigate('/booking');
+  };
 
     const renderSection = () => {
     switch (activeSection) {
@@ -20,14 +28,14 @@ const Home = () => {
               <input type="date" placeholder="Date of stay" />
               <input type="date" placeholder="Date of stay" />
               <input type="number" placeholder="Person" />
-              <button>FindTrip...</button>
-            </div>
+              <button onClick={handlefindtrip}>FindTrip...</button>
+              </div>
           </div>
         );
       case "profile":
         return (<div className="content-section"><Profile /></div>);
       case "contact":
-        return <div className="content-section"><Contact /></div>;
+        return <div className="content-section"><Navbar/><Contact /></div>;
       case "about":
         return <div className="content-section"><About/></div>;
       default:

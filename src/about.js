@@ -4,9 +4,11 @@ import img1 from './images/altis_resort.jpg';
 import sairam from './images/sairam.png';
 import gitanjani from './images/gitanjani.png';
 import priya from './images/Priya.jpg';
+import Navbar from './usernavbar';
 const About = () => {
   return (
     <div className="about-container">
+      <Navbar/>
       <h3><strong>About us</strong></h3>
       <div className="about-grid">
         

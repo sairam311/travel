@@ -4,6 +4,7 @@ import "./profile.css";
 import img1 from './images/altis_resort.jpg';
 import maldives from './images/maldives.png';
 import profile_pic from './images/user.jpg';
+import Navbar from "./usernavbar";
 
 const user = {
   name: "Sai Ram Chowdary",
@@ -206,6 +207,7 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
+      <Navbar/>
       <div className="profile-header">
         <br></br><br></br><br></br>
         <div className="profile-info">

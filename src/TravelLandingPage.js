@@ -3,11 +3,18 @@ import './App.css';
 import Login from './login';
 import Contact from './contact';
 import About from './about';
+import { useNavigate } from "react-router-dom";
 /* import logo from './images/logo.gif'; */
 
 const TravelLandingPage = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate(); 
+
+  const handlelogin = () => {
+    // Redirect to the TravelLandingPage ("/")
+    navigate('/login');
+  };
 
   const renderSection = () => {
     switch (activeSection) {
@@ -21,7 +28,7 @@ const TravelLandingPage = () => {
               <input type="date" placeholder="Date of stay" />
               <input type="date" placeholder="Date of stay" />
               <input type="number" placeholder="Person" />
-              <button>FindTrip</button>
+              <button onClick={handlelogin}>FindTrip</button>
             </div>
           </div>
         );
