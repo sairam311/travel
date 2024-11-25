@@ -69,6 +69,7 @@ const renderActiveTab=()=>{
         case "places":
             return (
                 <section className="places-to-visit">
+                  <Navbar/>
                     <div className="banner">
                         <h1>Welcome to Hyderabad</h1>
                     </div>
@@ -87,7 +88,8 @@ const renderActiveTab=()=>{
             );
         case "hotel":
             return (
-                <section className="rooms">
+              <section><Navbar/>
+                <div className="rooms">
                     <h1>Choose Your Accommodation</h1>
                       <div className="room-grid">
                         {rooms.map((room) => (
@@ -112,17 +114,18 @@ const renderActiveTab=()=>{
                         <span className="page">4</span>
                         <span className="next">Next &raquo;</span>
                     </div>
-                </section>
+                </div>
+              </section>
             );
         case "flight":
             return (
-                <div >
+                <div ><Navbar/>
 <h1>flight</h1>
                 </div>
             );
         case "bus":
             return (
-            <div>
+            <div><Navbar/>
 <h1>bus</h1>
             </div>
         );
@@ -131,7 +134,7 @@ const renderActiveTab=()=>{
 }};
 return (
     <div className="booking-container">
-        <Navbar/>
+        
         <br></br><br></br>
         <div className="booking-nav">
         <button className={activeTab === "places" ? "active" : ""} onClick={() => setActiveTab("places")}>Attractions</button>

@@ -1,11 +1,11 @@
 import React from 'react';
 import './contact.css';
-import Navbar from './usernavbar';
+
 
 const Contact = () => {
     return (
         <div className="contact-container">
-            <Navbar/>
+
             <br></br><br></br><br></br>
             <h1>Contact</h1>
             <form className="contact-form">

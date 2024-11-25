@@ -4,7 +4,6 @@ import Contact from './contact';
 import About from './about';
 import Profile from './profile';
 import { useNavigate } from "react-router-dom";
-import Navbar from './usernavbar';
 
 const Home = () => {
     const [activeSection, setActiveSection] = useState("home-login");
@@ -35,7 +34,7 @@ const Home = () => {
       case "profile":
         return (<div className="content-section"><Profile /></div>);
       case "contact":
-        return <div className="content-section"><Navbar/><Contact /></div>;
+        return <div className="content-section"><Contact /></div>;
       case "about":
         return <div className="content-section"><About/></div>;
       default:

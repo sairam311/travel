@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import './travelplaces.css';
-
 // Importing images
-import img1 from './images/altis_resort.jpg';
-import img2 from './images/profile_background.jpg';
-import img3 from './images/maldives.png';
-import img4 from './images/contact.jpg';
-import img5 from './images/img1.jpg';
+import img1 from './images/places/birlamandir.jpg';
+import img2 from './images/places/mumbai.jpg';
+import img3 from './images/places/goa.jpg';
+import img4 from './images/places/chennai.jpg';
+import img5 from './images/places/delhi.jpg';
+import img6 from './images/places/kolkata.avif';
 
 const TravelPlaces = () => {
   // Places array with imported images
   const places = [
-    { name: 'Switzerland', description: 'The combination of amazing weather, eye-captivating scenery of the Alps.', image: img1 },
-    { name: 'Finland', description: 'Finland is full of lakes and forests.', image: img2 },
-    { name: 'Iceland', description: 'A Nordic island country between the North Atlantic and Arctic Oceans, on the Mid-Atlantic Ridge between North America and Europe.', image: img3 },
-    { name: 'Australia', description: "The beauty, variety and pristine quality of Australia's natural landscapes, from exotic coastal areas to lush rainforests and red deserts.", image: img1 },
-    { name: 'Ireland', description: 'Ireland is known for its wide expanses of lush, green fields.', image: img4 },
-    { name: 'New Zealand', description: 'New Zealand markets itself abroad as a "clean, green" adventure-playground.', image: img5 },
+    { name: 'Hyderabd', description: 'Hyderabad, the "City of Pearls," is a vibrant blend of history, culture, and modernity. From iconic landmarks like Charminar and Golconda Fort to the world-famous Hyderabadi Biryani, the city offers a rich cultural experience.', image: img1 },
+    { name: 'Mumbai', description: 'Speckled with Victorian buildings, lofty skyscrapers, the glamour of Bollywood, pulsating nightlife and romantic beaches, the mega-city of Mumbai is a mecca for dreamers looking to make it big.', image: img2 },
+    { name: 'Goa', description: 'Popularly known as India’s party capital, Goa seduces travellers from all around the globe with its boho beaches, ancient churches, majestic forts and unbeatable nightlife!', image: img3 },
+    { name: 'Chennai', description: "With large stretches of white sand, diverse ethnicities and ancient monuments enhancing its natural, cultural, artistic and culinary vibe, the modern city of Chennai (formerly Madras) lies along the coast of Bay of Bengal.", image: img4 },
+    { name: 'New Delhi', description: 'With its flavourful street food, flea markets, monuments from different eras, throbbing nightlife, sprawling parks, posh colonies, old quarters, exclusive clubs and places of worship– the colouful metropolis of Delhi is a glorious blend of diverse cultures, languages and faiths.', image: img5 },
+    { name: 'Kolkata', description: 'With its quaint yellow taxis, vintage trams, massive bridges, age-old jazz bars, colonial structures, heritage homes, iconic eateries, Durga Puja festivities, picturesque ghats and boat rides over Ganga -- Kolkata is the city of picture perfect snapshots.', image: img6 },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(1); // Initially showing the second item (index 1)
