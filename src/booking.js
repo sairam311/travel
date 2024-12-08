@@ -39,7 +39,42 @@ const Booking=()=>{
         },
         // Add more room objects as needed
       ];
-   
+      const flights = [
+        {
+          id: 1,
+          title: "Indian Airways",
+          price: "₹ 12,000",
+          features: ["comfortable", "WiFi"],
+          img: '',
+          badge: "Available",
+        },
+        {
+          id: 2,
+          title: "American Airways",
+          price: "₹ 14,000",
+          features: ["Luxuary", "WiFi"],
+          img: '',
+          badge: "Available",
+        },
+      ];
+      const bus = [
+        {
+          id: 1,
+          title: "TSRTC",
+          price: "₹ 1,500",
+          features: ["comfortable"],
+          img: '',
+          badge: "Available",
+        },
+        {
+          id: 2,
+          title: "Manju Travels",
+          price: "₹ 2,000",
+          features: ["Luxuary"],
+          img: '',
+          badge: "Available",
+        },
+      ];
       const places = [
         {
           id: 1,
@@ -120,14 +155,64 @@ const renderActiveTab=()=>{
         case "flight":
             return (
                 <div ><Navbar/>
-<h1>flight</h1>
+                <div className="flights">
+                    <h1>Choose Your Flight</h1>
+                      <div className="flight-grid">
+                        {flights.map((flight) => (
+                        <div key={flight.id} className="flight-card">
+                            <span className="badge">{flight.badge}</span>
+                            <img src={flight.img} alt={flight.title} />
+                            <h3>{flight.title}</h3>
+                            <p className="price">Price: {flight.price}</p>
+                            <ul className="features">
+                                {flight.features.map((feature, index) => (
+                                <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
+                            <button className="book-btn">Book Flight</button>
+                        </div>
+                        ))}
+                    </div>
+                    <div className="pagination">
+                        <span className="page active">1</span>
+                        <span className="page">2</span>
+                        <span className="page">3</span>
+                        <span className="page">4</span>
+                        <span className="next">Next &raquo;</span>
+                    </div>
+                </div>
                 </div>
             );
         case "bus":
             return (
             <div><Navbar/>
-<h1>bus</h1>
-            </div>
+                <div className="flights">
+                    <h1>Choose Your Bus</h1>
+                      <div className="flight-grid">
+                        {bus.map((buses) => (
+                        <div key={buses.id} className="flight-card">
+                            <span className="badge">{buses.badge}</span>
+                            <img src={buses.img} alt={buses.title} />
+                            <h3>{buses.title}</h3>
+                            <p className="price">Price: {buses.price}</p>
+                            <ul className="features">
+                                {buses.features.map((feature, index) => (
+                                <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
+                            <button className="book-btn">Book Bus</button>
+                        </div>
+                        ))}
+                    </div>
+                    <div className="pagination">
+                        <span className="page active">1</span>
+                        <span className="page">2</span>
+                        <span className="page">3</span>
+                        <span className="page">4</span>
+                        <span className="next">Next &raquo;</span>
+                    </div>
+                </div>
+                </div>
         );
         default:
             return null;
