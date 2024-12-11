@@ -7,6 +7,7 @@ import Contact from './contact';
 import Login from './login';
 import Home from './home';
 import Booking from './booking';
+import Signup from './signup';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             {/* Route for landing page */}
             <Route path="/" element={<TravelLandingPage />} />
             <Route path="/login" element={<Login />} /> {/* Login page */}
+            <Route path="/signup" element={<Signup />} /> {/* signup page */}
             <Route path="/home" element={<Home />} />   {/* Home page */}
             <Route path="/profile" element={<Profile />} />
             <Route path="/booking" element={<Booking/>}/>

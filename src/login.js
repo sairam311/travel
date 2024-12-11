@@ -1,15 +1,35 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
+import axios from 'axios';
 import './login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error,setError]=useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add login logic here
+    if(!email || !password){
+      setError('Both email and password are required');
+      return;
+    }
+    axios
+      .post('http://localhost:4000/login',{email,password})
+      .then((response)=>{
+        if(response.data.message=='Login successful'){
+          navigate('/home');
+        }
+        else{
+          setError(response.data.message);
+        }
+      })
+      .catch((error)=>{
+        setError('Error logging in, please try again.');
+        console.error('Login error:',error);
+      });
     console.log('Email:', email);
     console.log('Password:', password);
     navigate('/home');
@@ -53,7 +73,7 @@ const Login = () => {
         </button>
       </form>
       <p className="login-footer-text">
-        Don’t have an account? <a href="/sign-up" className="login-link">Sign up</a>
+        Don’t have an account? <a href="/signup" className="login-link">Sign up</a>
       </p>
     </div>
     </div>
