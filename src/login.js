@@ -32,7 +32,7 @@ const Login = () => {
       });
     console.log('Email:', email);
     console.log('Password:', password);
-   // navigate('/home');
+    navigate('/home');
   };
 
   return (
