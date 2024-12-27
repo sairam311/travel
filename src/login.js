@@ -19,7 +19,7 @@ const Login = () => {
     axios
       .post('http://localhost:4000/login',{email,password})
       .then((response)=>{
-        if(response.data.message=='Login successful'){
+        if(response.data.message=='Login Successful'){
           navigate('/home');
         }
         else{
@@ -32,7 +32,7 @@ const Login = () => {
       });
     console.log('Email:', email);
     console.log('Password:', password);
-    navigate('/home');
+   // navigate('/home');
   };
 
   return (
