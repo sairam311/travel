@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add login logic here
+  {/*  // Add login logic here
     if(!email || !password){
       setError('Both email and password are required');
       return;
@@ -29,7 +29,7 @@ const Login = () => {
       .catch((error)=>{
         setError('Error logging in, please try again.');
         console.error('Login error:',error);
-      });
+      }); */}
     console.log('Email:', email);
     console.log('Password:', password);
     navigate('/home');
